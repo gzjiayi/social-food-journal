@@ -1,9 +1,11 @@
 import React from 'react';
+import Home from './pages/Home';
 
 function App() {
   return (
     <div>
-      <h1>Social Food Journal</h1>
+      <h1>Nomories</h1>
+      <Home />
     </div>
   );
 }
