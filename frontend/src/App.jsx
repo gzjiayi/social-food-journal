@@ -1,10 +1,9 @@
-import React from 'react';
-import Home from './pages/Home';
+import React from "react";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <div>
-      <h1>Nomories</h1>
       <Home />
     </div>
   );
