@@ -1,9 +1,9 @@
 import React from "react";
 import { House } from "lucide-react";
 
-export default function Navbar() {
+export default function Navbar({ className }) {
   return (
-    <div className="flex justify-between px-12 py-6 text-2xl">
+    <div className={`${className} flex justify-between text-2xl`}>
       <button>
         <a href="/">Nomories</a>
       </button>
