@@ -7,10 +7,14 @@ import FloatingAddButton from "src/components/custom/FloatingAddButton";
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <DateHeader />
-      <DailyMealCardsSection />
-      <FloatingAddButton />
+      <div>
+        <Navbar className="px-12 py-6" />
+      </div>
+      <div className="px-4 py-6">
+        <DateHeader />
+        <DailyMealCardsSection />
+        <FloatingAddButton />
+      </div>
     </>
   );
 }
