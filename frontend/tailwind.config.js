@@ -2,8 +2,8 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}", 
-    "./src/styles/**/*.css",     
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./src/styles/**/*.css",
     "./src/components/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
@@ -48,7 +48,10 @@ module.exports = {
         md: `calc(var(--radius) - 2px)`,
         sm: "calc(var(--radius) - 4px)",
       },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};
