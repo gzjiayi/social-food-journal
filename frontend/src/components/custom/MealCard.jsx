@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function MealCard({ image }) {
+export default function MealCard({ imageSrc, isActive }) {
   return (
-    <div className="bg-blue-500 w-full h-full">
+    <div className="w-full h-full">
       <img
-        src={image}
+        src={imageSrc}
         alt="delicious meal"
         className="w-full h-full object-cover "
       />

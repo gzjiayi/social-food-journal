@@ -12,13 +12,13 @@ export default function DailyMealCardsSection() {
   ];
 
   return (
-    <div className="grid grid-cols-1 gap-6 p-4 place-items-center w-max h-screen mx-auto">
+    <div className="flex flex-col justify-start items-center mx-auto px-4 py-8 space-y-8">
       {meals.map((meal) => (
         <div
           key={meal.id}
-          className="w-64 h-64 rounded-3xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-500 ease-in-out "
+          className="w-72 h-72 flex-shrink-0 overflow-hidden rounded-3xl bg-white shadow-[0_4px_10px_rgba(0,0,0,0.1)] hover:scale-105 hover:shadow-[0_6px_15px_rgba(0,0,0,0.15)] transition-transform duration-500 "
         >
-          <MealCard image={meal.image} />
+          <MealCard imageSrc={meal.image} />
         </div>
       ))}
     </div>
