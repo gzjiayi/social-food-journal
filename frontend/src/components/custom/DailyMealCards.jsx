@@ -12,7 +12,7 @@ export default function DailyMealCardsSection() {
   ];
 
   return (
-    <div className="flex flex-col justify-start items-center mx-auto px-4 py-8 space-y-8">
+    <div className="flex flex-col justify-start items-center mx-auto px-4 pt-6 pb-12 space-y-8">
       {meals.map((meal) => (
         <div
           key={meal.id}
