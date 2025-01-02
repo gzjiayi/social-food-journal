@@ -1,6 +1,7 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function MealCard({ imageSrc, isActive }) {
+export default function MealCard({ imageSrc }) {
   return (
     <div className="w-full h-full">
       <img
@@ -11,3 +12,7 @@ export default function MealCard({ imageSrc, isActive }) {
     </div>
   );
 }
+
+MealCard.propTypes = {
+  imageSrc: PropTypes.string.isRequired,
+};

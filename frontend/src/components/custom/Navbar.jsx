@@ -1,5 +1,6 @@
-import React from "react";
-import { House } from "lucide-react";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { House } from 'lucide-react';
 
 export default function Navbar({ className }) {
   return (
@@ -21,3 +22,7 @@ export default function Navbar({ className }) {
     </div>
   );
 }
+
+Navbar.propTypes = {
+  className: PropTypes.string,
+};

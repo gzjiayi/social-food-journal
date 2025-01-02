@@ -1,5 +1,6 @@
-import React from "react";
-import { Plus } from "lucide-react";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Plus } from 'lucide-react';
 
 export default function FloatingAddButton() {
   return (
@@ -11,3 +12,7 @@ export default function FloatingAddButton() {
     </button>
   );
 }
+
+FloatingAddButton.propTypes = {
+  className: PropTypes.string,
+};

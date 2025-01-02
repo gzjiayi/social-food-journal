@@ -1,0 +1,5 @@
+# Ensure JSON files use LF
+*.json text eol=lf
+
+# General rule for text files
+* text=auto

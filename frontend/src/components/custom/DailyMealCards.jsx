@@ -1,8 +1,9 @@
-import React from "react";
-import MealCard from "src/components/custom/MealCard";
-import image1 from "src/assets/images/image1.jpg";
-import image2 from "src/assets/images/image2.jpeg";
-import image3 from "src/assets/images/image3.jpg";
+import React from 'react';
+import PropTypes from 'prop-types';
+import MealCard from 'src/components/custom/MealCard';
+import image1 from 'src/assets/images/image1.jpg';
+import image2 from 'src/assets/images/image2.jpeg';
+import image3 from 'src/assets/images/image3.jpg';
 
 export default function DailyMealCardsSection() {
   const meals = [
@@ -24,3 +25,7 @@ export default function DailyMealCardsSection() {
     </div>
   );
 }
+
+DailyMealCardsSection.propTypes = {
+  className: PropTypes.string,
+};
