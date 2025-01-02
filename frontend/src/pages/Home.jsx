@@ -4,7 +4,7 @@ import DateHeader from 'src/components/custom/DateHeader';
 import DailyMealCardsSection from 'src/components/custom/DailyMealCards';
 import FloatingAddButton from 'src/components/custom/FloatingAddButton';
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <div>
@@ -17,4 +17,6 @@ export default function Home() {
       </div>
     </>
   );
-}
+};
+
+export default Home;

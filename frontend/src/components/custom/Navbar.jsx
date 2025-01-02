@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { House } from 'lucide-react';
 
-export default function Navbar({ className }) {
+const Navbar = ({ className }) => {
   return (
     <div className={`${className} flex justify-between text-2xl`}>
       <button>
@@ -21,8 +21,10 @@ export default function Navbar({ className }) {
       </div>
     </div>
   );
-}
+};
 
 Navbar.propTypes = {
   className: PropTypes.string,
 };
+
+export default Navbar;

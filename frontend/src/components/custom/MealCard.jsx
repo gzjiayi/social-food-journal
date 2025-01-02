@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function MealCard({ imageSrc }) {
+const MealCard = ({ imageSrc }) => {
   return (
     <div className="w-full h-full">
       <img
@@ -11,8 +11,10 @@ export default function MealCard({ imageSrc }) {
       />
     </div>
   );
-}
+};
 
 MealCard.propTypes = {
   imageSrc: PropTypes.string.isRequired,
 };
+
+export default MealCard;

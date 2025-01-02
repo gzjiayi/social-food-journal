@@ -5,7 +5,7 @@ import image1 from 'src/assets/images/image1.jpg';
 import image2 from 'src/assets/images/image2.jpeg';
 import image3 from 'src/assets/images/image3.jpg';
 
-export default function DailyMealCardsSection() {
+const DailyMealCardsSection = () => {
   const meals = [
     { id: 1, image: image1 },
     { id: 2, image: image2 },
@@ -24,8 +24,10 @@ export default function DailyMealCardsSection() {
       ))}
     </div>
   );
-}
+};
 
 DailyMealCardsSection.propTypes = {
   className: PropTypes.string,
 };
+
+export default DailyMealCardsSection;
