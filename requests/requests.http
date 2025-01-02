@@ -1,0 +1,13 @@
+@baseUrl = http://localhost:5000
+
+### Test GET /meals
+GET {{baseUrl}}/meals
+
+### Test POST /meals
+POST {{baseUrl}}/meals 
+Content-Type: application/json
+
+{
+    "name": "Haemul Pajeon",
+    "calories": 800
+}
