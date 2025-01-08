@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from 'src/components/custom/Navbar';
 import DateHeader from 'src/components/custom/DateHeader';
 import DailyMealCardsSection from 'src/components/custom/DailyMealCards';
 import FloatingAddButton from 'src/components/custom/FloatingAddButton';
+import LogMealDialog from 'src/components/custom/LogMealDialog';
 
 const Home = () => {
+  const [isLogMealDialogOpen, setIsLogMealDialogOpen] = useState(false);
+
+  const handleFABClick = () => {
+    setIsLogMealDialogOpen(true);
+  };
+
   return (
     <>
       <div>
@@ -13,7 +20,8 @@ const Home = () => {
       <div className="px-4 py-6">
         <DateHeader />
         <DailyMealCardsSection />
-        <FloatingAddButton />
+        <FloatingAddButton onClick={handleFABClick} />
+        {isLogMealDialogOpen && <LogMealDialog isOpen={isLogMealDialogOpen} />}
       </div>
     </>
   );

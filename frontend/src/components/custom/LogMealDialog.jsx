@@ -1,18 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
-} from '@/components/ui/dialog';
+} from 'src/components/ui/dialog';
 
-const LogMealDialog = () => {
+const LogMealDialog = ({ isOpen }) => {
   return (
     <div>
-      <Dialog>
-        <DialogTrigger>Open</DialogTrigger>
+      <Dialog open={isOpen}>
         <DialogContent>
           <DialogHeader>
             <DialogTitle>Are you absolutely sure?</DialogTitle>
@@ -25,6 +25,10 @@ const LogMealDialog = () => {
       </Dialog>
     </div>
   );
+};
+
+LogMealDialog.propTypes = {
+  isOpen: PropTypes.bool,
 };
 
 export default LogMealDialog;
