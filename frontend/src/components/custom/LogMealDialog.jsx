@@ -9,17 +9,21 @@ import {
   DialogTitle,
 } from 'src/components/ui/dialog';
 
-const LogMealDialog = ({ isOpen }) => {
+const LogMealDialog = ({ isOpen, onClose }) => {
   return (
     <div>
-      <Dialog open={isOpen}>
+      <Dialog
+        // open prop reflects the dialog's state and drives its visibility
+        open={isOpen}
+        // when user interacts with the dialog (open state changes) onOpenChange event handler is called
+        // dialog is opened: onOpenChange(true) called, onClose() not executed
+        // dialog is closed: onOpenChange(false) called, onClose() executed
+        onOpenChange={(isNowOpen) => !isNowOpen && onClose()}
+      >
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Are you absolutely sure?</DialogTitle>
-            <DialogDescription>
-              This action cannot be undone. This will permanently delete your
-              account and remove your data from our servers.
-            </DialogDescription>
+            <DialogTitle>Log Meal</DialogTitle>
+            <DialogDescription></DialogDescription>
           </DialogHeader>
         </DialogContent>
       </Dialog>
@@ -29,6 +33,7 @@ const LogMealDialog = ({ isOpen }) => {
 
 LogMealDialog.propTypes = {
   isOpen: PropTypes.bool,
+  onClose: PropTypes.func,
 };
 
 export default LogMealDialog;

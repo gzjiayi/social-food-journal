@@ -21,7 +21,13 @@ const Home = () => {
         <DateHeader />
         <DailyMealCardsSection />
         <FloatingAddButton onClick={handleFABClick} />
-        {isLogMealDialogOpen && <LogMealDialog isOpen={isLogMealDialogOpen} />}
+        {isLogMealDialogOpen && (
+          <LogMealDialog
+            isOpen={isLogMealDialogOpen}
+            // Pass the onClose function as a prop to give dialog ability to update the isLogMealDialogOpen state
+            onClose={() => setIsLogMealDialogOpen(false)}
+          />
+        )}
       </div>
     </>
   );
